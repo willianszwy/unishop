@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d513c4bbc9200b1539b9e3d20b612c24",
+    "revision": "ca07d89ddd8a20bcb3ed2822791205ea",
     "url": "/unishop/index.html"
   },
   {
-    "revision": "d0f30811d61b5dd9f967",
+    "revision": "5f17d56edd5273e649ba",
     "url": "/unishop/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "d0f30811d61b5dd9f967",
-    "url": "/unishop/static/js/2.d75def61.chunk.js"
+    "revision": "5f17d56edd5273e649ba",
+    "url": "/unishop/static/js/2.2ff1c86f.chunk.js"
   },
   {
-    "revision": "81a76f34deb95d83c3bd",
-    "url": "/unishop/static/js/main.aa0a2ffd.chunk.js"
+    "revision": "a449d20b05822b28d873",
+    "url": "/unishop/static/js/main.ff0b7f18.chunk.js"
   },
   {
     "revision": "d02dff361e03661932b0",

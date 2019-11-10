@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/unishop/static/js/main.aa0a2ffd.chunk.js",
-    "main.js.map": "/unishop/static/js/main.aa0a2ffd.chunk.js.map",
+    "main.js": "/unishop/static/js/main.ff0b7f18.chunk.js",
+    "main.js.map": "/unishop/static/js/main.ff0b7f18.chunk.js.map",
     "runtime-main.js": "/unishop/static/js/runtime-main.db5d655c.js",
     "runtime-main.js.map": "/unishop/static/js/runtime-main.db5d655c.js.map",
     "static/css/2.764ccc25.chunk.css": "/unishop/static/css/2.764ccc25.chunk.css",
-    "static/js/2.d75def61.chunk.js": "/unishop/static/js/2.d75def61.chunk.js",
-    "static/js/2.d75def61.chunk.js.map": "/unishop/static/js/2.d75def61.chunk.js.map",
+    "static/js/2.2ff1c86f.chunk.js": "/unishop/static/js/2.2ff1c86f.chunk.js",
+    "static/js/2.2ff1c86f.chunk.js.map": "/unishop/static/js/2.2ff1c86f.chunk.js.map",
     "index.html": "/unishop/index.html",
-    "precache-manifest.4cf722b5586535389e0da3bf5b47fbb7.js": "/unishop/precache-manifest.4cf722b5586535389e0da3bf5b47fbb7.js",
+    "precache-manifest.655a1a7b8931b74deeeab555d4a6f912.js": "/unishop/precache-manifest.655a1a7b8931b74deeeab555d4a6f912.js",
     "service-worker.js": "/unishop/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/unishop/static/css/2.764ccc25.chunk.css.map",
     "static/media/logo.svg": "/unishop/static/media/logo.01c07428.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.db5d655c.js",
     "static/css/2.764ccc25.chunk.css",
-    "static/js/2.d75def61.chunk.js",
-    "static/js/main.aa0a2ffd.chunk.js"
+    "static/js/2.2ff1c86f.chunk.js",
+    "static/js/main.ff0b7f18.chunk.js"
   ]
 }
