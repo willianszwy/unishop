@@ -30,7 +30,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 const Routes = () => (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
         <Switch>
             <Route path="/login" exact component={Login} />
             <Route path="/logout" exact component={Logout} />
