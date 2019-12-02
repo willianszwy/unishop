@@ -24,7 +24,8 @@ const useForm = (callback, initialState) => {
         setErrors,
         handleSubmit,
         handleInputChange,
-        inputs
+        inputs,
+        setInputs
     };
 };
 export default useForm;

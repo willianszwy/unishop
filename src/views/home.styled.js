@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
 export const StyledHome = styled.div`
-    border: 2px solid ${props => props.theme.gray700};
-    padding: 2rem;
-    margin: 50px auto;
-    max-width: 600px;
-    border-radius: 10px;
-    background: #fff;
-    color: black;
+    margin: 80px 0;
 
-    @media (max-width: 765px) {
-        margin: 50px 10px;
+    .search-menu {
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        padding: 0 15px;
     }
 `;

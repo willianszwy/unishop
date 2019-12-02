@@ -1,25 +1,40 @@
 import React from "react";
-import { StyledRecovery } from "./recovery.styled";
 import useForm from "../hooks/formHooks";
 import api from "../services/api";
 import { isAuthenticated } from "../services/auth";
-import { Button, Input } from "../components";
 import { Link } from "react-router-dom";
+import StyledButton from "../components/Button";
+import TextField from "@material-ui/core/TextField";
+import { Card, CardContent, Container, IconButton } from "@material-ui/core";
+import Loader from "../components/Loader";
+import { makeStyles } from "@material-ui/core/styles";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+
+const useStyles = makeStyles(theme => ({
+    card: {
+        marginTop: "10px"
+    }
+}));
 
 const Recovery = props => {
     if (isAuthenticated()) {
         props.history.push("/");
     }
-    const recoveryHandle = async inputs => {
-        try {
-            const { email } = inputs;
-            await api.post("/recuperar", {
-                email
+    const classes = useStyles();
+    const [loading, setLoading] = React.useState(false);
+    const recoveryHandle = inputs => {
+        setLoading(true);
+        const { email } = inputs;
+        api.post("/recuperar", {
+            email
+        })
+            .then(response => {
+                setLoading(false);
+                props.history.push("/");
+            })
+            .catch(err => {
+                setLoading(false);
             });
-            props.history.push("/");
-        } catch (err) {
-            console.log(err);
-        }
     };
     const initialState = { email: "" };
     const { inputs, handleInputChange, handleSubmit } = useForm(
@@ -27,25 +42,43 @@ const Recovery = props => {
         initialState
     );
     return (
-        <StyledRecovery>
-            <div>
-                <Link to="/login">Voltar</Link>
-            </div>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <Input
-                        type="email"
-                        name="username"
-                        placeholder="Email"
-                        onChange={handleInputChange}
-                        value={inputs.username}
-                        required
-                    />
-                </div>
+        <div>
+            <Loader show={loading} />
+            <Container maxWidth="sm">
+                <Card className={classes.card}>
+                    <CardContent>
+                        <div>
+                            <IconButton
+                                size="small"
+                                component={Link}
+                                to="/login"
+                            >
+                                <ArrowBackIosIcon />
+                            </IconButton>
+                        </div>
+                        <form onSubmit={handleSubmit}>
+                            <div>
+                                <TextField
+                                    type="email"
+                                    name="email"
+                                    label="Email"
+                                    onChange={handleInputChange}
+                                    value={inputs.email}
+                                    margin="normal"
+                                    variant="filled"
+                                    fullWidth
+                                    required
+                                />
+                            </div>
 
-                <Button type="submit">Enviar</Button>
-            </form>
-        </StyledRecovery>
+                            <StyledButton type="submit" fullWidth>
+                                Enviar
+                            </StyledButton>
+                        </form>
+                    </CardContent>
+                </Card>
+            </Container>
+        </div>
     );
 };
 
